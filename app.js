@@ -7,6 +7,8 @@ var chordsBarre = ['F', 'Bm']
 var slider = document.getElementById('myRange')
 var speed1
 var speed2
+var audio = new Audio('click.wav');
+
 
 
 document.getElementById('myRange').addEventListener('click', listenSpeed)
@@ -65,63 +67,65 @@ CheckSlider()
 
 // EASY OPTION
 
+if(document.getElementById('1').checked) 
 
-if(document.getElementById('1').checked) {   
+{   
     chord.innerHTML = "Tuning..."
     setInterval(myMethod1, speed1);
     
-    function myMethod1() {
+    function myMethod1() 
+    {
+    audio.play();
     chords = chords.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
-    CheckSlider();
-
-   
     }
-
 }
+
+
 
 // MEDIUM OPTION
 
-} if (document.getElementById('2').checked) {
+if (document.getElementById('2').checked) {
 chord.innerHTML = "Tuning..."
 setInterval(myMethod, speed1);
 
 function myMethod( )
 {
+    audio.play();
     chords = chords.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
-    CheckSlider();
+    
 }
 
 setInterval(fchord, speed2);
 
     function fchord() {
+    audio.play();
     chord.innerHTML = "F";
-    CheckSlider();
+   
 }
 
 // HARD OPTION
 
 } if (document.getElementById('3').checked) {
-    console.log("Hard")
-
+    
     chord.innerHTML = "Tuning..."
 
     setInterval(myMethod, speed1);
     
     function myMethod( )
     {
+        audio.play();
         chords = chords.sort(() => Math.random() - 0.5);
         chord.innerHTML = chords[1];
-        CheckSlider();
     }
     
     setInterval(fchord, speed2);
     
     function fchord() {
+        audio.play();
         chordsBarre= chordsBarre.sort(() => Math.random() - 0.5);
-        chord.innerHTML = chordsBarre[1];
-        CheckSlider();  
+        chord.innerHTML = chordsBarre[1];  
     }
 
 // RANDOM OPTION
@@ -129,19 +133,19 @@ setInterval(fchord, speed2);
 } if (document.getElementById('4').checked) {
 
     chord.innerHTML = "Tuning..."
-    setInterval(myMethod3, speed1);
+    setInterval(myMethod, speed1);
 
-function myMethod3( )
+function myMethod()
 {
+    audio.play();
     chords = chordsRand.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
-    CheckSlider();
+   
+}
 }
 
 
-
 }
-
   
 
 
