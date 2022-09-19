@@ -2,7 +2,7 @@ Chord Hero is a simple app that helps guitarists improve their skills, especiall
 
 When I was learning to play the guitar, I always struggled with playing the so-called barre chords.  There were a few songs that I really wanted to play that had an ‘F’ or a ‘Bm‘ chord, which made it almost impossible for me to play the song.
 
-My guitar teacher told me that it would be a great idea if I could practice a little a drill. The exercise involved playing two random ‘easy’ chords that I knew and every third had to be one of the hard barre chord. 
+My guitar teacher told me that it would be a great idea if I could practice a little drill. The exercise involved playing two random ‘easy’ chords that I knew and every third had to be one of the hard barre chord. 
 
 The idea for Chord Hero was born! I set out to create a random chord generator that allows you to practice different chords including the barre ones. The app was created over the weekend with plain-vanilla Javascript and deployed/hosted using Netlify. 
 
