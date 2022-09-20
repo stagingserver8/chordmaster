@@ -1,9 +1,9 @@
 
 
 var chord = document.getElementById('chord');
-var chords = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'Em', 'G', 'G7'];
-var chordsRand = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'Em', 'G', 'G7', 'F', 'Bm'];
-var chordsBarre = ['F', 'Bm']
+var chords = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'Em', 'G', 'G7', 'E7' ];
+var chordsRand = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'E7', 'Em', 'G', 'G7', 'F', 'Bm', 'B'];
+var chordsBarre = ['F', 'Bm', 'B']
 var slider = document.getElementById('myRange')
 var speed1
 var speed2
@@ -87,9 +87,9 @@ if(document.getElementById('1').checked)
 
 if (document.getElementById('2').checked) {
 chord.innerHTML = "Tuning..."
-setInterval(myMethod, speed1);
+setInterval(myMethod2, speed1);
 
-function myMethod( )
+function myMethod2( )
 {
     audio.play();
     chords = chords.sort(() => Math.random() - 0.5);
@@ -111,9 +111,9 @@ setInterval(fchord, speed2);
     
     chord.innerHTML = "Tuning..."
 
-    setInterval(myMethod, speed1);
+    setInterval(myMethod3, speed1);
     
-    function myMethod( )
+    function myMetho3( )
     {
         audio.play();
         chords = chords.sort(() => Math.random() - 0.5);
@@ -133,9 +133,9 @@ setInterval(fchord, speed2);
 } if (document.getElementById('4').checked) {
 
     chord.innerHTML = "Tuning..."
-    setInterval(myMethod, speed1);
+    setInterval(myMethod4, speed1);
 
-function myMethod()
+function myMethod4()
 {
     audio.play();
     chords = chordsRand.sort(() => Math.random() - 0.5);
