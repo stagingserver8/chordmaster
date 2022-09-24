@@ -15,7 +15,8 @@ var audio = document.getElementById('audio');
 //soundEffect.autoplay = true;
 //soundEffect.play();
 
-
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
 
 var x = document.getElementById("myAudio"); 
@@ -34,7 +35,7 @@ for (let i = 0; i < 5; i++) {
 
 
 setInterval(function () {
-    playAudio(); 
+    //playAudio(); 
 }, 1000);
 
 
