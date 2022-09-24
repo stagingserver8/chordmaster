@@ -33,6 +33,11 @@ for (let i = 0; i < 5; i++) {
   }
 
 
+setInterval(function () {
+    playAudio(); 
+}, 1000);
+
+
 
 //playAudio();
 
