@@ -21,9 +21,11 @@ var audio = document.getElementById('audio');
 var x = document.getElementById("myAudio"); 
 
 function playAudio() { 
+    playAudio.defaultMuted=false;
     x.volume=1;
     x.play(); 
 } 
+
 
 
 
