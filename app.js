@@ -10,6 +10,20 @@ var speed
 //var SOUND_SUCCESS = new Audio('click.wav');
 var audio = document.getElementById('audio');
 
+
+
+const button = document.getElementById('start')
+let audio1 = null
+button.addEventListener('click', () => {
+    audio1 = new Audio('click.wav')
+    // Works because `audio` itself was created synchronously during user event handler
+    setTimeout(() => { audio1.play() }, 1000)
+})
+
+
+
+
+
 //const soundEffect = new Audio();
 //soundEffect.src = 'click.wav';
 //soundEffect.autoplay = true;
@@ -114,7 +128,7 @@ document.location.reload()
 
 function start() {
 CheckSlider()
-playAudio(); 
+//playAudio(); 
 var tenMinutes = 60 * 10,
 display = document.querySelector('#start');
 startTimer(tenMinutes, display);
