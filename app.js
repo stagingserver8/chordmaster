@@ -7,14 +7,29 @@ var chordsBarre = ['F', 'Bm', 'B']
 var slider = document.getElementById('myRange')
 var speed
 
-var SOUND_SUCCESS = new Audio('click.wav');
-var audio1 = document.getElementById('audio1');
+//var SOUND_SUCCESS = new Audio('click.wav');
+var audio = document.getElementById('audio');
 
-
-const soundEffect = new Audio();
-soundEffect.src = 'click.wav';
+//const soundEffect = new Audio();
+//soundEffect.src = 'click.wav';
 //soundEffect.autoplay = true;
 //soundEffect.play();
+
+
+
+
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+
+//playAudio();
 
 
 
@@ -84,6 +99,7 @@ function stop() {
 document.location.reload()
 }
 
+
 function start() {
 CheckSlider()
 
@@ -102,7 +118,7 @@ if(document.getElementById('1').checked)
     setInterval(myMethod1, speed);
     function myMethod1() 
     {
-        soundEffect.play();
+    playAudio(); 
     chords = chords.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     }
@@ -116,7 +132,7 @@ setInterval(myMethod2, speed);
 
 function myMethod2( )
 {
-    
+    playAudio();    
     chords = chordsRand.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     
@@ -124,8 +140,3 @@ function myMethod2( )
    
 }
 }
-
-
-
-    
-
