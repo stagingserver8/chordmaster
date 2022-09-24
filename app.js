@@ -8,10 +8,15 @@ var slider = document.getElementById('myRange')
 var speed
 
 var SOUND_SUCCESS = new Audio('click.wav');
+var audio1 = document.getElementById('audio1');
+
 
 const soundEffect = new Audio();
-soundEffect.autoplay = true;
 soundEffect.src = 'click.wav';
+//soundEffect.autoplay = true;
+//soundEffect.play();
+
+
 
 
 
@@ -95,10 +100,9 @@ if(document.getElementById('1').checked)
 {   
     chord.innerHTML = "Tuning..."
     setInterval(myMethod1, speed);
-    
     function myMethod1() 
     {
-    soundEffect.play();
+        soundEffect.play();
     chords = chords.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     }
@@ -112,7 +116,7 @@ setInterval(myMethod2, speed);
 
 function myMethod2( )
 {
-    soundEffect.play();
+    
     chords = chordsRand.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     
