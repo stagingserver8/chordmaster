@@ -3,31 +3,11 @@
 var chord = document.getElementById('chord');
 var chords = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'Em', 'G', 'G7', 'E7' ];
 var chordsRand = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'E7', 'Em', 'G', 'G7', 'F', 'Bm', 'B'];
-var chordsBarre = ['F', 'Bm', 'B']
+var chordsBarre = ['F', 'Bm', 'B', 'F', 'Bm', 'B', 'F', 'Bm', 'B','C', 'D', 'Dm', 'A', 'Am', 'E', 'Em', 'G', 'G7', 'E7', 'F', 'F'  ]
 var slider = document.getElementById('myRange')
 var speed
 
-//var SOUND_SUCCESS = new Audio('click.wav');
 var audio = document.getElementById('audio');
-
-
-
-const button = document.getElementById('start')
-let audio1 = null
-button.addEventListener('click', () => {
-    audio1 = new Audio('click.wav')
-    // Works because `audio` itself was created synchronously during user event handler
-    setTimeout(() => { audio1.play() }, 1000)
-})
-
-
-
-
-
-//const soundEffect = new Audio();
-//soundEffect.src = 'click.wav';
-//soundEffect.autoplay = true;
-//soundEffect.play();
 
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
@@ -37,21 +17,7 @@ var x = document.getElementById("myAudio");
 
 function playAudio() { 
     x.play(); 
-
 } 
-
-playAudio(); 
-
-for (let i = 0; i < 5; i++) {
-    playAudio(); 
-    console.log("helo")
-  }
-
-
-setInterval(function () {
-    //playAudio(); 
-}, 1000);
-
 
 
 //playAudio();
@@ -128,7 +94,7 @@ document.location.reload()
 
 function start() {
 CheckSlider()
-//playAudio(); 
+playAudio(); 
 var tenMinutes = 60 * 10,
 display = document.querySelector('#start');
 startTimer(tenMinutes, display);
@@ -165,4 +131,22 @@ function myMethod2( )
 }
    
 }
+if (document.getElementById('3').checked) {
+    chord.innerHTML = "Tuning..."
+    setInterval(myMethod3, speed);
+    
+    function myMethod3( )
+    {
+        playAudio();    
+        chords = chordsBarre.sort(() => Math.random() - 0.5);
+        chord.innerHTML = chords[1];
+        
+    }
+       
+    }
+
+
+
+
+
 }
