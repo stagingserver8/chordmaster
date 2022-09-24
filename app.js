@@ -32,9 +32,6 @@ function playAudio() {
 //playAudio();
 
 
-
-
-
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
