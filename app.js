@@ -98,6 +98,10 @@ function CheckSlider() {
         speed = 2000;
     }
 
+    if (slider.value == 3) {
+        speed = 1000;
+    }
+
     }
 
 document.getElementById('start').addEventListener('click', start)
