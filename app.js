@@ -8,6 +8,7 @@ var slider = document.getElementById('myRange')
 var speed
 var audio = new Audio('click.wav');
 
+var SOUND_SUCCESS = new Audio('click.wav');
 
 
 function startTimer(duration, display) {
@@ -93,7 +94,7 @@ if(document.getElementById('1').checked)
     
     function myMethod1() 
     {
-    audio.play();
+    SOUND_SUCCESS.play();
     chords = chords.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     }
@@ -107,7 +108,7 @@ setInterval(myMethod2, speed);
 
 function myMethod2( )
 {
-    audio.play();
+    SOUND_SUCCESS.play();
     chords = chordsRand.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     
