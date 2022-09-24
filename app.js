@@ -21,12 +21,10 @@ var audio = document.getElementById('audio');
 var x = document.getElementById("myAudio"); 
 
 function playAudio() { 
-  x.play(); 
+    x.volume=1;
+    x.play(); 
 } 
 
-function pauseAudio() { 
-  x.pause(); 
-} 
 
 
 //playAudio();
