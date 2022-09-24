@@ -6,9 +6,13 @@ var chordsRand = ['C', 'D', 'Dm', 'A', 'Am', 'E', 'E7', 'Em', 'G', 'G7', 'F', 'B
 var chordsBarre = ['F', 'Bm', 'B']
 var slider = document.getElementById('myRange')
 var speed
-var audio = new Audio('click.wav');
 
 var SOUND_SUCCESS = new Audio('click.wav');
+
+const soundEffect = new Audio();
+soundEffect.autoplay = true;
+soundEffect.src = 'click.wav';
+
 
 
 function startTimer(duration, display) {
@@ -94,7 +98,7 @@ if(document.getElementById('1').checked)
     
     function myMethod1() 
     {
-    SOUND_SUCCESS.play();
+    soundEffect.play();
     chords = chords.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     }
@@ -108,7 +112,7 @@ setInterval(myMethod2, speed);
 
 function myMethod2( )
 {
-    SOUND_SUCCESS.play();
+    soundEffect.play();
     chords = chordsRand.sort(() => Math.random() - 0.5);
     chord.innerHTML = chords[1];
     
