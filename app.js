@@ -21,11 +21,16 @@ var audio = document.getElementById('audio');
 var x = document.getElementById("myAudio"); 
 
 function playAudio() { 
-    playAudio.defaultMuted=false;
-    x.volume=1;
     x.play(); 
+
 } 
 
+playAudio(); 
+
+for (let i = 0; i < 5; i++) {
+    playAudio(); 
+    console.log("helo")
+  }
 
 
 
@@ -99,7 +104,7 @@ document.location.reload()
 
 function start() {
 CheckSlider()
-
+playAudio(); 
 var tenMinutes = 60 * 10,
 display = document.querySelector('#start');
 startTimer(tenMinutes, display);
