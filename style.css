@@ -52,6 +52,11 @@ body{
     
 }
 
+.buttons button:focus {
+  cursor: default;
+  box-shadow: 0px 0px;
+}
+
 
 /* Customize the label (the container) */
 .boxes {
