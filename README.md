@@ -1,4 +1,4 @@
-Chord Hero is a simple app that helps guitarists improve their skills, especially playing barre chords.
+Chord Hero is a simple app that helps guitarists improve their skills, especially playing barre chords. It is hosted online: https://www.chordhero.co/
 
 When I was learning to play the guitar, I always struggled with playing the so-called barre chords.  There were a few songs that I really wanted to play that had an ‘F’ or a ‘Bm‘ chord, which made it almost impossible for me to play the song.
 
